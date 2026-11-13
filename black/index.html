@@ -4,255 +4,315 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Black da Maria Carla · Noivas e Debutantes</title>
-<meta name="description" content="Lista VIP da Black Friday de Maria Carla Penteados: pacotes de penteado para noivas e debutantes com condição especial.">
+<meta name="description" content="Lista VIP da Black de Maria Carla Penteados: pacotes de penteado para noivas e debutantes em Escada e Recife.">
 <meta property="og:title" content="Black da Maria Carla · Lista VIP">
 <meta property="og:description" content="Pacotes de penteado para noivas e debutantes. Entre na lista e receba a condição da Black primeiro.">
-<meta property="og:image" content="img/maria-carla.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500;1,600&family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+<meta property="og:image" content="img/maria-carla-hero.jpg">
+<meta name="theme-color" content="#16100D">
+<link rel="preload" href="fonts/Chillax-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/Satoshi-Variable.woff2" as="font" type="font/woff2" crossorigin>
 
 <!--
   PAGINA DE CAPTURA - BLACK MARIA CARLA
   Antes de publicar, trocar:
   1. WHATSAPP: no <script> no fim da pagina, troque 5581999999999 pelo numero real (55 + DDD + numero).
-  2. Quando a oferta da Black estiver definida, trocar os textos "Na Black: revelado na lista".
+  2. Quando a oferta da Black estiver definida, trocar os textos "Na Black: na lista VIP".
 -->
 
 <style>
+  @font-face { font-family: "Chillax"; src: url("fonts/Chillax-Variable.woff2") format("woff2"); font-weight: 200 700; font-display: swap; }
+  @font-face { font-family: "Satoshi"; src: url("fonts/Satoshi-Variable.woff2") format("woff2"); font-weight: 300 900; font-display: swap; }
+
   :root {
-    --preto: #16100D;
-    --cafe: #241A15;
-    --cafe-2: #2F231D;
-    --nude: #F5EDE6;
-    --rose: #E8CBC0;
+    /* escuro */
+    --fundo: #16100D;
+    --papel: #221915;
+    --tinta: #F5EDE6;
+    --tinta-suave: #C9BBB0;
+    --linha: #3A2E27;
+    /* claro */
+    --fundo-claro: #F5EDE6;
+    --tinta-escura: #241A15;
+    --tinta-escura-suave: #5E4D43;
+    --linha-clara: #E3D5CA;
+    /* destaque: o vinho da marca; rose é o vinho legível no escuro */
     --vinho: #7E2F3E;
-    --vinho-claro: #A34A5B;
-    --dourado: #D9B48F;
-    --texto-suave: #CDBFB5;
+    --rose: #E8CBC0;
+    --foco: #E8CBC0;
+
+    --display: "Chillax", "Outfit", ui-sans-serif, system-ui, sans-serif;
+    --texto: "Satoshi", "DM Sans", ui-sans-serif, system-ui, sans-serif;
   }
+
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
-    background: var(--preto);
-    color: var(--nude);
-    font-family: 'Outfit', Arial, sans-serif;
-    line-height: 1.55;
+    background: var(--fundo);
+    color: var(--tinta);
+    font-family: var(--texto);
+    font-size: 17px;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
-  h1, h2, h3, .serif { font-family: 'Fraunces', Georgia, serif; font-weight: 600; }
-  .coluna { max-width: 520px; margin: 0 auto; padding: 0 20px; }
+  img { display: block; max-width: 100%; }
+  :focus-visible { outline: 2px solid var(--foco); outline-offset: 2px; }
 
-  .faixa {
-    background: var(--vinho);
-    color: var(--nude);
-    text-align: center;
-    font-size: 12px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    padding: 9px 16px;
-    font-weight: 500;
-  }
+  .rotulo { font-family: var(--texto); font-size: 12px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--tinta-suave); }
+  .titulo { font-family: var(--display); font-weight: 500; font-size: clamp(30px, 6vw, 40px); line-height: 1.15; letter-spacing: -0.005em; }
+  .numeral { font-family: var(--display); font-weight: 700; }
 
-  /* Hero */
-  .hero { padding: 36px 0 12px; text-align: center; position: relative; overflow: hidden; }
-  .hero::before {
-    content: ""; position: absolute; inset: 0; pointer-events: none;
-    background:
-      radial-gradient(circle at 12% 10%, rgba(126,47,62,0.35), transparent 45%),
-      radial-gradient(circle at 90% 40%, rgba(217,180,143,0.14), transparent 45%);
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  @media (min-width: 900px) { .wrap { padding: 0 48px; } }
+
+  /* Botão */
+  .botao {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 52px; padding: 0 32px; border-radius: 9999px; border: 0;
+    font-family: var(--texto); font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    text-decoration: none; cursor: pointer;
+    background: var(--rose); color: var(--tinta-escura);
+    transition: transform 250ms;
   }
-  .hero > * { position: relative; }
-  .eyebrow {
-    font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase;
-    color: var(--dourado); font-weight: 500;
+  .botao:hover { transform: translateY(-2px); }
+  .botao.vinho { background: var(--vinho); color: var(--tinta); }
+  .botao.cheio { width: 100%; }
+
+  /* Faixa */
+  .faixa { border-bottom: 1px solid var(--linha); position: relative; z-index: 2; }
+  .faixa .wrap { display: flex; justify-content: space-between; align-items: center; height: 52px; gap: 16px; }
+  .faixa .marca { font-family: var(--display); font-weight: 565; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; }
+  .faixa .rotulo { color: var(--rose); }
+
+  /* ===== Hero: a foto como parte da página ===== */
+  .hero { position: relative; isolation: isolate; }
+  .hero-foto {
+    position: absolute; z-index: -1; top: 0; right: 0;
+    width: 100%; height: 600px;
+    -webkit-mask-image: linear-gradient(to bottom, #000 50%, transparent 100%);
+            mask-image: linear-gradient(to bottom, #000 50%, transparent 100%);
   }
+  .hero-foto picture, .hero-foto img { width: 100%; height: 100%; }
+  .hero-foto img { object-fit: cover; object-position: 55% 15%; }
+  .hero-conteudo { padding-top: 380px; padding-bottom: 72px; }
   .hero h1 {
-    font-size: clamp(40px, 11vw, 56px);
-    line-height: 1.02;
-    font-style: italic;
+    font-family: var(--display); font-weight: 500;
+    font-size: clamp(44px, 12vw, 76px); line-height: 1.02; letter-spacing: -0.01em;
     margin-top: 12px;
   }
-  .hero h1 span { color: var(--dourado); display: block; font-style: normal; }
-  .hero .sub { color: var(--texto-suave); font-size: 16px; max-width: 400px; margin: 16px auto 0; }
+  .hero h1 em { font-style: normal; color: var(--rose); display: block; }
+  .hero .sub { color: var(--tinta-suave); font-size: 18px; margin-top: 16px; max-width: 32ch; }
 
-  .foto {
-    width: 270px; height: 360px; margin: 28px auto 0;
-    border-radius: 999px 999px 24px 24px;
-    overflow: hidden;
-    border: 1px solid rgba(217,180,143,0.4);
-    box-shadow: 0 24px 50px rgba(0,0,0,0.5);
+  @media (min-width: 900px) {
+    .hero { min-height: 780px; }
+    .hero-foto {
+      width: 70%; height: min(100%, 860px);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 42%), linear-gradient(to bottom, #000 72%, transparent 100%);
+      -webkit-mask-composite: source-in;
+              mask-image: linear-gradient(to right, transparent 0%, #000 42%), linear-gradient(to bottom, #000 72%, transparent 100%);
+              mask-composite: intersect;
+    }
+    .hero-foto img { object-position: 38% 30%; }
+    .hero-conteudo { padding-top: 96px; padding-bottom: 112px; max-width: 500px; }
   }
-  .foto img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; display: block; }
-  .assinatura { margin-top: 14px; font-size: 14px; color: var(--texto-suave); }
-  .assinatura strong { color: var(--nude); font-weight: 500; }
 
   /* Formulário */
-  .card {
-    background: var(--cafe);
-    border: 1px solid rgba(217,180,143,0.25);
-    border-radius: 20px;
-    padding: 26px 22px;
-    margin: 32px 0;
+  .form-lista {
+    margin-top: 32px;
+    background: var(--papel);
+    border: 1px solid var(--linha);
+    border-radius: 8px;
+    padding: 24px;
   }
-  .card h2 { font-size: 26px; line-height: 1.15; }
-  .card p.intro { color: var(--texto-suave); font-size: 15px; margin-top: 8px; }
-  form { margin-top: 20px; display: grid; gap: 14px; }
-  label { font-size: 13px; font-weight: 500; color: var(--rose); display: block; margin-bottom: 6px; }
+  .form-lista h2 { font-family: var(--display); font-weight: 500; font-size: 22px; line-height: 1.25; }
+  .form-lista p.intro { color: var(--tinta-suave); font-size: 15px; margin-top: 6px; }
+  form { margin-top: 20px; display: grid; gap: 16px; }
+  .campo label, .campo .legenda { display: block; font-size: 13px; font-weight: 500; color: var(--tinta-suave); margin-bottom: 6px; }
   input, select {
-    width: 100%;
-    font: inherit; font-size: 16px;
-    color: var(--nude);
-    background: var(--preto);
-    border: 1px solid rgba(232,203,192,0.25);
-    border-radius: 12px;
-    padding: 13px 14px;
-    appearance: none;
+    width: 100%; min-height: 48px;
+    font: inherit; font-size: 16px; color: var(--tinta);
+    background: var(--fundo); border: 1px solid var(--linha); border-radius: 8px;
+    padding: 0 14px; appearance: none;
   }
   select {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23D9B48F' stroke-width='1.6'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23C9BBB0' stroke-width='1.5'/%3E%3C/svg%3E");
     background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px;
   }
-  input:focus, select:focus { outline: 2px solid var(--dourado); outline-offset: 1px; border-color: transparent; }
-  input::placeholder { color: #7d6d63; }
-  .opcoes { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .opcoes { position: relative; }
-  .opcoes input { position: absolute; opacity: 0; pointer-events: none; width: 1px; height: 1px; left: 0; top: 0; }
-  .opcoes label {
-    margin: 0; text-align: center; cursor: pointer;
-    border: 1px solid rgba(232,203,192,0.25); border-radius: 12px;
-    padding: 12px 8px; color: var(--nude); font-size: 15px; font-weight: 500;
+  input::placeholder { color: #7a6a60; }
+  input:focus, select:focus { outline: 2px solid var(--foco); outline-offset: 2px; }
+  .duas { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; position: relative; }
+  .duas input { position: absolute; opacity: 0; width: 1px; height: 1px; left: 0; top: 0; pointer-events: none; }
+  .duas label {
+    margin: 0; min-height: 48px; display: flex; align-items: center; justify-content: center;
+    border: 1px solid var(--linha); border-radius: 8px; cursor: pointer;
+    font-size: 15px; font-weight: 500; color: var(--tinta);
   }
-  .opcoes input:checked + label { background: var(--vinho); border-color: var(--vinho-claro); }
-  .opcoes input:focus-visible + label { outline: 2px solid var(--dourado); }
-  .botao {
-    display: block; width: 100%;
-    background: var(--dourado); color: var(--preto);
-    font: inherit; font-weight: 700; font-size: 16px;
-    border: 0; border-radius: 999px; padding: 16px 20px;
-    cursor: pointer; text-align: center; text-decoration: none;
-    box-shadow: 0 10px 24px rgba(217,180,143,0.18);
-  }
-  .botao:hover { filter: brightness(1.06); }
-  .nota { font-size: 12.5px; color: #9d8d82; text-align: center; }
-  .erro { color: #f0a3ae; font-size: 13px; display: none; }
+  .duas input:checked + label { border-color: var(--rose); color: var(--rose); }
+  .duas input:focus-visible + label { outline: 2px solid var(--foco); outline-offset: 2px; }
+  .erro { color: var(--rose); font-size: 14px; display: none; }
+  .nota { font-size: 13px; color: var(--tinta-suave); text-align: center; }
 
   /* Seções */
-  section { padding: 28px 0; }
-  section h2 { font-size: 30px; line-height: 1.12; }
-  section h2 + p { color: var(--texto-suave); margin-top: 8px; }
+  section { padding: 72px 0; }
+  @media (min-width: 900px) { section { padding: 112px 0; } }
+  .cabeca { display: flex; flex-direction: column; gap: 8px; max-width: 680px; }
+  .cabeca .numeral { font-size: 20px; color: var(--rose); }
+  .cabeca p { color: var(--tinta-suave); margin-top: 4px; }
 
-  .passos { list-style: none; margin-top: 20px; display: grid; gap: 14px; counter-reset: p; }
-  .passos li { display: grid; grid-template-columns: 40px 1fr; gap: 12px; align-items: start; }
-  .passos li::before {
-    counter-increment: p; content: counter(p);
-    font-family: 'Fraunces', Georgia, serif; font-size: 20px; color: var(--dourado);
-    width: 40px; height: 40px; border-radius: 50%;
-    border: 1px solid rgba(217,180,143,0.45);
-    display: grid; place-items: center;
+  .claro { background: var(--fundo-claro); color: var(--tinta-escura); }
+  .claro .cabeca p { color: var(--tinta-escura-suave); }
+  .claro .cabeca .numeral { color: var(--vinho); }
+
+  /* Passos */
+  .passos { list-style: none; margin-top: 48px; display: grid; border-top: 1px solid var(--linha-clara); }
+  .passos li { display: grid; grid-template-columns: 48px 1fr; gap: 16px; padding: 24px 0; border-bottom: 1px solid var(--linha-clara); }
+  .passos .n { font-family: var(--display); font-weight: 700; font-size: 26px; line-height: 1.1; color: var(--vinho); }
+  .passos h3 { font-family: var(--display); font-weight: 500; font-size: 21px; line-height: 1.3; }
+  .passos p { color: var(--tinta-escura-suave); font-size: 16px; margin-top: 4px; max-width: 60ch; }
+  @media (min-width: 900px) {
+    .passos { grid-template-columns: repeat(5, 1fr); border-top: 0; gap: 24px; }
+    .passos li { grid-template-columns: 1fr; align-content: start; border-bottom: 0; border-top: 1px solid var(--tinta-escura); padding: 20px 0 0; gap: 12px; }
   }
-  .passos strong { display: block; font-weight: 500; }
-  .passos span { color: var(--texto-suave); font-size: 14.5px; }
 
-  .abas { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 20px; background: var(--cafe); padding: 5px; border-radius: 999px; }
+  /* Pacotes */
+  .abas { display: inline-grid; grid-template-columns: 1fr 1fr; margin-top: 40px; border: 1px solid var(--linha); border-radius: 9999px; padding: 4px; }
   .abas button {
-    font: inherit; font-weight: 500; font-size: 15px; color: var(--texto-suave);
-    background: none; border: 0; border-radius: 999px; padding: 10px; cursor: pointer;
+    font-family: var(--texto); font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--tinta-suave); background: none; border: 0; border-radius: 9999px; min-height: 44px; padding: 0 24px; cursor: pointer;
   }
-  .abas button[aria-selected="true"] { background: var(--vinho); color: var(--nude); }
-
-  .pacotes { display: grid; gap: 14px; margin-top: 18px; }
+  .abas button[aria-selected="true"] { background: var(--tinta); color: var(--tinta-escura); }
+  .pacotes { display: grid; gap: 16px; margin-top: 24px; }
   .pacotes[hidden] { display: none; }
+  @media (min-width: 700px) { .pacotes { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1040px) { .pacotes { grid-template-columns: repeat(4, 1fr); } }
   .pacote {
-    background: var(--cafe); border-radius: 18px; padding: 20px;
-    border: 1px solid rgba(232,203,192,0.12);
+    background: var(--papel); border: 1px solid var(--linha); border-radius: 8px;
+    padding: 24px; display: flex; flex-direction: column;
+    transition: transform 250ms;
   }
-  .pacote.destaque { border-color: var(--dourado); background: linear-gradient(160deg, #33251E, var(--cafe)); }
-  .pacote .selo {
-    display: inline-block; font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--preto); background: var(--dourado); border-radius: 999px; padding: 3px 10px; margin-bottom: 10px; font-weight: 700;
+  .pacote:hover { transform: translateY(-3px); }
+  .pacote.destaque { border-color: var(--rose); }
+  .pacote .rotulo { color: var(--rose); min-height: 15px; }
+  .pacote h3 { font-family: var(--display); font-weight: 500; font-size: 22px; line-height: 1.25; margin-top: 8px; }
+  .pacote ul { list-style: none; margin-top: 16px; display: grid; gap: 8px; align-content: start; flex: 1; }
+  .pacote li { font-size: 15px; color: var(--tinta-suave); padding-left: 16px; position: relative; line-height: 1.45; }
+  .pacote li::before { content: ""; position: absolute; left: 0; top: 10px; width: 6px; height: 1px; background: var(--rose); }
+  .preco { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--linha); }
+  .preco .de { font-size: 14px; color: var(--tinta-suave); }
+  .preco .de s { color: var(--tinta); }
+  .preco .black { font-family: var(--display); font-weight: 500; font-size: 18px; color: var(--rose); margin-top: 4px; }
+
+  /* Quem: a foto entra pela borda */
+  .quem { position: relative; isolation: isolate; padding: 0; }
+  .quem-foto {
+    position: relative; height: 420px;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 15%, #000 55%, transparent 100%);
+            mask-image: linear-gradient(to bottom, transparent 0%, #000 15%, #000 55%, transparent 100%);
   }
-  .pacote h3 { font-size: 22px; }
-  .pacote ul { list-style: none; margin-top: 10px; display: grid; gap: 5px; }
-  .pacote li { font-size: 14.5px; color: var(--texto-suave); padding-left: 18px; position: relative; }
-  .pacote li::before { content: "✦"; position: absolute; left: 0; color: var(--dourado); font-size: 10px; top: 5px; }
-  .preco { margin-top: 14px; padding-top: 12px; border-top: 1px dashed rgba(232,203,192,0.2); display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
-  .preco .de { font-size: 13.5px; color: #9d8d82; }
-  .preco .de s { color: var(--texto-suave); }
-  .preco .black { font-size: 13.5px; color: var(--dourado); font-weight: 500; }
+  .quem-foto img { width: 100%; height: 100%; object-fit: cover; object-position: 10% 30%; }
+  .quem-texto { padding: 0 0 72px; margin-top: -56px; position: relative; }
+  .quem-texto p { color: var(--tinta-suave); margin-top: 16px; max-width: 60ch; }
+  @media (min-width: 900px) {
+    .quem { min-height: 680px; display: flex; align-items: center; }
+    .quem-foto {
+      position: absolute; z-index: -1; inset: 0 auto 0 0; width: 64%; height: 100%;
+      -webkit-mask-image: linear-gradient(to left, transparent 0%, #000 40%), linear-gradient(to bottom, transparent 0%, #000 18%, #000 80%, transparent 100%);
+      -webkit-mask-composite: source-in;
+              mask-image: linear-gradient(to left, transparent 0%, #000 40%), linear-gradient(to bottom, transparent 0%, #000 18%, #000 80%, transparent 100%);
+              mask-composite: intersect;
+    }
+    .quem-foto img { object-position: 0% 30%; }
+    .quem .wrap { width: 100%; display: flex; justify-content: flex-end; }
+    .quem-texto { width: 440px; padding: 112px 0; margin: 0; }
+  }
 
-  .quem { display: grid; gap: 18px; }
-  .quem img { width: 100%; height: auto; border-radius: 18px; display: block; aspect-ratio: 3/2; object-fit: cover; object-position: 20% 30%; }
-  .quem p { color: var(--texto-suave); }
+  /* Fecho */
+  .fecho .wrap { display: grid; gap: 32px; }
+  @media (min-width: 900px) { .fecho .wrap { grid-template-columns: 1.15fr 1fr; align-items: end; } .fecho .acao { justify-self: end; } }
 
-  .final { text-align: center; padding: 36px 0 56px; }
-  .final h2 { font-size: 32px; }
-  .final p { color: var(--texto-suave); margin: 10px auto 22px; max-width: 380px; }
-
-  footer { text-align: center; font-size: 12.5px; color: #7d6d63; padding: 0 20px 32px; }
-  footer a { color: var(--texto-suave); }
+  footer { border-top: 1px solid var(--linha); }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding-top: 24px; padding-bottom: 32px; font-size: 13px; color: var(--tinta-suave); }
+  footer a { color: var(--tinta-suave); }
 </style>
 </head>
 <body>
 
-<div class="faixa">Black Friday · Lista VIP aberta</div>
+<div class="faixa">
+  <div class="wrap">
+    <span class="marca">Maria Carla</span>
+    <span class="rotulo">Black · Lista VIP</span>
+  </div>
+</div>
 
 <header class="hero">
-  <div class="coluna">
-    <p class="eyebrow">Noivas e Debutantes</p>
-    <h1>A Black da<span>Maria Carla</span></h1>
-    <p class="sub">Pacotes de penteado para o seu casamento ou a sua festa de 15 anos, com uma condição que só abre uma vez no ano. Quem está na lista recebe primeiro.</p>
-    <div class="foto"><img src="img/maria-carla.jpg" alt="Maria Carla sorrindo enquanto faz um penteado" width="900" height="1350"></div>
-    <p class="assinatura"><strong>Maria Carla</strong> · Penteadista em Escada e Recife</p>
+  <div class="hero-foto">
+    <picture>
+      <source media="(min-width: 900px)" srcset="img/maria-carla-hero.jpg">
+      <img src="img/maria-carla-hero-mobile.jpg" alt="Maria Carla sorrindo enquanto trabalha num penteado" width="900" height="1091" fetchpriority="high">
+    </picture>
+  </div>
+  <div class="wrap">
+    <div class="hero-conteudo">
+      <p class="rotulo">Noivas e debutantes</p>
+      <h1>A Black da <em>Maria Carla</em></h1>
+      <p class="sub">Pacotes de penteado para o seu casamento ou para os seus 15 anos, numa condição que abre uma vez no ano.</p>
+
+      <div class="form-lista" id="lista">
+        <h2>Entre na lista VIP</h2>
+        <p class="intro">A condição da Black e as datas livres chegam primeiro no seu WhatsApp.</p>
+        <form id="form" novalidate>
+          <div class="campo">
+            <label for="nome">Seu nome</label>
+            <input id="nome" name="nome" autocomplete="given-name" placeholder="Como você se chama" required>
+          </div>
+          <div class="campo">
+            <label for="whats">Seu WhatsApp</label>
+            <input id="whats" name="whats" type="tel" inputmode="tel" autocomplete="tel" placeholder="(81) 9 0000-0000" required>
+          </div>
+          <div class="campo">
+            <span class="legenda" id="lbl-tipo">O evento é</span>
+            <div class="duas" role="radiogroup" aria-labelledby="lbl-tipo">
+              <input type="radio" id="t-noiva" name="tipo" value="casamento" checked><label for="t-noiva">Casamento</label>
+              <input type="radio" id="t-deb" name="tipo" value="festa de 15 anos"><label for="t-deb">15 anos</label>
+            </div>
+          </div>
+          <div class="campo">
+            <label for="quando">Quando é o dia</label>
+            <select id="quando" name="quando"></select>
+          </div>
+          <p class="erro" id="erro">Preencha seu nome e um WhatsApp com DDD.</p>
+          <button class="botao cheio" type="submit">Quero entrar na lista</button>
+          <p class="nota">Ao enviar, abre uma conversa com a Maria Carla no WhatsApp.</p>
+        </form>
+      </div>
+    </div>
   </div>
 </header>
 
-<main class="coluna">
-
-  <div class="card" id="lista">
-    <h2>Entre na lista VIP da Black</h2>
-    <p class="intro">Deixe seus dados. A condição especial e as vagas de agenda chegam no seu WhatsApp antes de abrir para todo mundo.</p>
-    <form id="form" novalidate>
-      <div>
-        <label for="nome">Seu nome</label>
-        <input id="nome" name="nome" autocomplete="given-name" placeholder="Como você se chama?" required>
-      </div>
-      <div>
-        <label for="whats">Seu WhatsApp</label>
-        <input id="whats" name="whats" type="tel" inputmode="tel" autocomplete="tel" placeholder="(81) 9 0000-0000" required>
-      </div>
-      <div>
-        <label id="lbl-tipo">O evento é</label>
-        <div class="opcoes" role="radiogroup" aria-labelledby="lbl-tipo">
-          <input type="radio" id="t-noiva" name="tipo" value="casamento" checked><label for="t-noiva">Casamento</label>
-          <input type="radio" id="t-deb" name="tipo" value="festa de 15 anos"><label for="t-deb">15 anos</label>
-        </div>
-      </div>
-      <div>
-        <label for="quando">Quando é o grande dia?</label>
-        <select id="quando" name="quando"></select>
-      </div>
-      <p class="erro" id="erro">Preencha seu nome e um WhatsApp com DDD.</p>
-      <button class="botao" type="submit">Quero entrar na lista VIP</button>
-      <p class="nota">Ao enviar, abrimos uma conversa no WhatsApp da Maria Carla com seus dados.</p>
-    </form>
-  </div>
-
-  <section>
-    <h2>Como funciona o atendimento</h2>
-    <p>Cada pacote parte de uma conversa. O penteado é pensado para você, não tirado de catálogo.</p>
+<section class="claro">
+  <div class="wrap">
+    <div class="cabeca">
+      <span class="numeral">01.</span>
+      <h2 class="titulo">Como funciona</h2>
+      <p>Cada pacote começa numa conversa. O penteado é pensado para o seu cabelo e para o seu dia.</p>
+    </div>
     <ol class="passos">
-      <li><div><strong>Reunião inicial</strong><span>Presencial ou on-line. Escuto o que você sonha e o que te preocupa, avalio seu cabelo, indico técnicas (aplique, se precisar) e definimos o penteado.</span></div></li>
-      <li><div><strong>Pré-wedding</strong><span>Para noivas: um penteado para o ensaio fotográfico antes do casamento.</span></div></li>
-      <li><div><strong>Prova do penteado</strong><span>Fazemos o penteado combinado para você se ver antes e acertarmos os últimos detalhes.</span></div></li>
-      <li><div><strong>O grande dia</strong><span>Replico fielmente o penteado da prova. Minha atenção fica toda em você.</span></div></li>
-      <li><div><strong>Acompanhamento</strong><span>Fico na festa para trocar o penteado ou retocar qualquer imprevisto.</span></div></li>
+      <li><span class="n">1</span><div><h3>Reunião inicial</h3><p>Presencial ou on-line. Escuto o que você imagina e o que te preocupa, avalio o cabelo, indico técnicas e definimos o penteado.</p></div></li>
+      <li><span class="n">2</span><div><h3>Pré-wedding</h3><p>Para noivas: um penteado para o ensaio de fotos antes do casamento.</p></div></li>
+      <li><span class="n">3</span><div><h3>Prova</h3><p>Fazemos o penteado combinado. Você se vê antes e acertamos os detalhes.</p></div></li>
+      <li><span class="n">4</span><div><h3>O dia</h3><p>Repito o penteado da prova. Minha atenção fica toda em você.</p></div></li>
+      <li><span class="n">5</span><div><h3>Acompanhamento</h3><p>Fico na festa para trocar o penteado ou retocar o que sair do lugar.</p></div></li>
     </ol>
-  </section>
+  </div>
+</section>
 
-  <section id="pacotes">
-    <h2>Os pacotes da Black</h2>
-    <p>Valores de tabela abaixo. O preço da Black chega primeiro para quem está na lista.</p>
+<section id="pacotes">
+  <div class="wrap">
+    <div class="cabeca">
+      <span class="numeral">02.</span>
+      <h2 class="titulo">Os pacotes da Black</h2>
+      <p>Abaixo, o valor de tabela de cada um. O valor da Black vai primeiro para quem está na lista.</p>
+    </div>
 
     <div class="abas" role="tablist">
       <button role="tab" aria-selected="true" aria-controls="p-noiva" id="a-noiva">Noivas</button>
@@ -261,92 +321,97 @@
 
     <div class="pacotes" id="p-noiva" role="tabpanel" aria-labelledby="a-noiva">
       <article class="pacote destaque">
-        <span class="selo">Mais completo</span>
+        <span class="rotulo">Mais completo</span>
         <h3>Noiva Diamante Premium</h3>
-        <ul>
-          <li>Reunião inicial</li><li>Penteado do pré-wedding</li><li>Prova do penteado</li><li>Penteado no dia do casamento</li>
-          <li>Acompanhamento nas 3 primeiras horas</li><li>Penteado de 3 acompanhantes (mãe, sogra, melhor amiga)</li>
-        </ul>
-        <div class="preco"><span class="de">Fora da Black: <s>R$ 2.600</s></span><span class="black">Na Black: na lista VIP</span></div>
+        <ul><li>Reunião inicial</li><li>Penteado do pré-wedding</li><li>Prova do penteado</li><li>Penteado no dia do casamento</li><li>Acompanhamento nas 3 primeiras horas</li><li>Penteado de 3 acompanhantes (mãe, sogra, melhor amiga)</li></ul>
+        <div class="preco"><p class="de">Tabela: <s>R$ 2.600</s></p><p class="black">Na Black: na lista VIP</p></div>
       </article>
       <article class="pacote">
+        <span class="rotulo">&nbsp;</span>
         <h3>Noiva Diamante</h3>
-        <ul>
-          <li>Reunião inicial</li><li>Penteado do pré-wedding</li><li>Prova do penteado</li><li>Penteado no dia do casamento</li>
-          <li>Acompanhamento nas 3 primeiras horas</li>
-        </ul>
-        <div class="preco"><span class="de">Fora da Black: <s>R$ 2.000</s></span><span class="black">Na Black: na lista VIP</span></div>
+        <ul><li>Reunião inicial</li><li>Penteado do pré-wedding</li><li>Prova do penteado</li><li>Penteado no dia do casamento</li><li>Acompanhamento nas 3 primeiras horas</li></ul>
+        <div class="preco"><p class="de">Tabela: <s>R$ 2.000</s></p><p class="black">Na Black: na lista VIP</p></div>
       </article>
       <article class="pacote">
+        <span class="rotulo">&nbsp;</span>
         <h3>Noiva Esmeralda</h3>
-        <ul>
-          <li>Reunião inicial</li><li>Penteado do pré-wedding</li><li>Prova do penteado</li><li>Penteado no dia do casamento</li>
-        </ul>
-        <div class="preco"><span class="de">Fora da Black: <s>R$ 1.500</s></span><span class="black">Na Black: na lista VIP</span></div>
+        <ul><li>Reunião inicial</li><li>Penteado do pré-wedding</li><li>Prova do penteado</li><li>Penteado no dia do casamento</li></ul>
+        <div class="preco"><p class="de">Tabela: <s>R$ 1.500</s></p><p class="black">Na Black: na lista VIP</p></div>
       </article>
       <article class="pacote">
+        <span class="rotulo">&nbsp;</span>
         <h3>Noiva Rubi</h3>
-        <ul>
-          <li>Reunião inicial (presencial ou on-line)</li><li>Prova do penteado</li><li>Penteado no dia do casamento</li>
-        </ul>
-        <div class="preco"><span class="de">Fora da Black: <s>R$ 1.200</s></span><span class="black">Na Black: na lista VIP</span></div>
+        <ul><li>Reunião inicial (presencial ou on-line)</li><li>Prova do penteado</li><li>Penteado no dia do casamento</li></ul>
+        <div class="preco"><p class="de">Tabela: <s>R$ 1.200</s></p><p class="black">Na Black: na lista VIP</p></div>
       </article>
     </div>
 
     <div class="pacotes" id="p-deb" role="tabpanel" aria-labelledby="a-deb" hidden>
       <article class="pacote destaque">
-        <span class="selo">Mais completo</span>
+        <span class="rotulo">Mais completo</span>
         <h3>Debutante Plus</h3>
-        <ul>
-          <li>Reunião inicial</li><li>Prova do penteado</li><li>Penteado no dia do debute</li>
-          <li>Acompanhamento nas 3 primeiras horas</li><li>Penteado de 3 acompanhantes (mãe e amigas)</li>
-        </ul>
-        <div class="preco"><span class="de">Fora da Black: <s>R$ 1.800</s></span><span class="black">Na Black: na lista VIP</span></div>
+        <ul><li>Reunião inicial</li><li>Prova do penteado</li><li>Penteado no dia do debute</li><li>Acompanhamento nas 3 primeiras horas</li><li>Penteado de 3 acompanhantes (mãe e amigas)</li></ul>
+        <div class="preco"><p class="de">Tabela: <s>R$ 1.800</s></p><p class="black">Na Black: na lista VIP</p></div>
       </article>
       <article class="pacote">
+        <span class="rotulo">&nbsp;</span>
         <h3>Debutante Premium</h3>
-        <ul>
-          <li>Reunião inicial</li><li>Prova do penteado</li><li>Penteado no dia do debute</li><li>Acompanhamento nas 3 primeiras horas</li>
-        </ul>
-        <div class="preco"><span class="de">Fora da Black: <s>R$ 1.200</s></span><span class="black">Na Black: na lista VIP</span></div>
+        <ul><li>Reunião inicial</li><li>Prova do penteado</li><li>Penteado no dia do debute</li><li>Acompanhamento nas 3 primeiras horas</li></ul>
+        <div class="preco"><p class="de">Tabela: <s>R$ 1.200</s></p><p class="black">Na Black: na lista VIP</p></div>
       </article>
       <article class="pacote">
+        <span class="rotulo">&nbsp;</span>
         <h3>Debutante Básico Plus</h3>
         <ul><li>Reunião inicial</li><li>Prova do penteado</li><li>Penteado no dia do debute</li></ul>
-        <div class="preco"><span class="de">Fora da Black: <s>R$ 600</s></span><span class="black">Na Black: na lista VIP</span></div>
+        <div class="preco"><p class="de">Tabela: <s>R$ 600</s></p><p class="black">Na Black: na lista VIP</p></div>
       </article>
       <article class="pacote">
+        <span class="rotulo">&nbsp;</span>
         <h3>Debutante Básico</h3>
         <ul><li>Reunião inicial</li><li>Prova do penteado</li></ul>
-        <div class="preco"><span class="de">Fora da Black: <s>R$ 400</s></span><span class="black">Na Black: na lista VIP</span></div>
+        <div class="preco"><p class="de">Tabela: <s>R$ 400</s></p><p class="black">Na Black: na lista VIP</p></div>
       </article>
     </div>
-  </section>
-
-  <section class="quem">
-    <img src="img/maria-carla-trabalhando.jpg" alt="Maria Carla finalizando cachos com babyliss" width="1200" height="800" loading="lazy">
-    <div>
-      <h2>Quem vai cuidar do seu cabelo</h2>
-      <p style="margin-top:10px">Sou a Maria Carla. No dia do casamento ou dos 15 anos, quero que você se veja como a mulher que sonhou ser naquele dia. Por isso começo escutando, faço a prova com calma e, no grande dia, repito o penteado fio a fio.</p>
-    </div>
-  </section>
-
-  <div class="final">
-    <h2>Garanta seu lugar na lista</h2>
-    <p>As datas de casamento e de festa se fecham rápido. A lista recebe primeiro a condição e a agenda.</p>
-    <a class="botao" href="#lista">Quero entrar na lista VIP</a>
   </div>
-</main>
+</section>
+
+<section class="quem">
+  <div class="quem-foto">
+    <img src="img/maria-carla-atendendo.jpg" alt="Maria Carla modelando cachos com o babyliss" width="1400" height="933" loading="lazy">
+  </div>
+  <div class="wrap">
+    <div class="quem-texto">
+      <div class="cabeca">
+        <span class="numeral">03.</span>
+        <h2 class="titulo">Quem cuida do seu cabelo</h2>
+      </div>
+      <p>Sou a Maria Carla, penteadista em Escada e Recife. No casamento ou nos 15 anos, quero que você se veja como imaginou ser naquele dia. Começo escutando, faço a prova com calma e, no dia, repito o penteado fio a fio.</p>
+    </div>
+  </div>
+</section>
+
+<section class="claro fecho">
+  <div class="wrap">
+    <div class="cabeca">
+      <span class="numeral">04.</span>
+      <h2 class="titulo">Entre na lista antes da Black abrir</h2>
+      <p>As datas de casamento e de festa se fecham com antecedência. Quem está na lista recebe a condição e a agenda primeiro.</p>
+    </div>
+    <div class="acao"><a class="botao vinho" href="#lista">Quero entrar na lista</a></div>
+  </div>
+</section>
 
 <footer>
-  <a href="../">mariacarlapenteados.com.br</a> · Maria Carla Penteados
+  <div class="wrap">
+    <span>Maria Carla Penteados · Escada e Recife</span>
+    <a href="../">mariacarlapenteados.com.br</a>
+  </div>
 </footer>
 
 <script>
   // >>> TROCAR pelo número real da Maria Carla (55 + DDD + número, só dígitos)
   const WHATSAPP = '5581999999999';
 
-  // Meses do evento: próximos 18 meses
   const sel = document.getElementById('quando');
   const meses = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
   const hoje = new Date();
@@ -358,7 +423,6 @@
   }
   sel.add(new Option('Ainda não tenho data', 'data ainda não definida'));
 
-  // Abas
   const abas = document.querySelectorAll('[role=tab]');
   abas.forEach(b => b.addEventListener('click', () => {
     abas.forEach(x => {
@@ -368,7 +432,6 @@
     });
   }));
 
-  // Máscara simples do WhatsApp
   const whats = document.getElementById('whats');
   whats.addEventListener('input', () => {
     let v = whats.value.replace(/\D/g, '').slice(0, 11);
@@ -377,7 +440,6 @@
     whats.value = v;
   });
 
-  // Envio: abre o WhatsApp com os dados
   document.getElementById('form').addEventListener('submit', e => {
     e.preventDefault();
     const nome = document.getElementById('nome').value.trim();
@@ -387,7 +449,7 @@
     erro.style.display = 'none';
     const tipo = document.querySelector('input[name=tipo]:checked').value;
     const quando = sel.value || 'data ainda não definida';
-    const msg = `Oi, Maria Carla! Quero entrar na lista VIP da Black.\n\nNome: ${nome}\nWhatsApp: ${whats.value}\nEvento: ${tipo}\nQuando: ${quando}`;
+    const msg = `Oi, Maria Carla. Quero entrar na lista VIP da Black.\n\nNome: ${nome}\nWhatsApp: ${whats.value}\nEvento: ${tipo}\nQuando: ${quando}`;
     window.location.href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
   });
 </script>
